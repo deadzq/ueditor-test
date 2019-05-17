@@ -1,4 +1,7 @@
-# ueditor-test
-很详细的SpringBoot整合UEditor教程
 
-博客地址：https://blog.csdn.net/qq_33745799/article/details/70031641
+简要说明:<br>
+
+1. 启动后访问localhost
+2. application.properties中配置的上传文件保存位置,注意静态路径的file指定必须用到
+3. resources下面的config.json有图片保存地址image
+4. 其它静态资源,java代码按原样copy即可使用
