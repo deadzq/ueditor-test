@@ -20,7 +20,7 @@ public final class ConfigManager {
 	private final String rootPath;
 	private final String originalPath;
 	private final String contextPath;
-	private static final String configFileName = "config.json";
+	private static final String configFileName = "ueditor.json";
 	private String parentPath = null;
 	private JSONObject jsonConfig = null;
 	// 涂鸦上传filename定义
@@ -156,7 +156,7 @@ public final class ConfigManager {
 		this.parentPath = file.getParent();
 		
 		//String configContent = this.readFile( this.getConfigPath() );
-		String configContent = this.filter(IOUtils.toString(this.getClass().getClassLoader().getResourceAsStream("config.json")));
+		String configContent = this.filter(IOUtils.toString(this.getClass().getClassLoader().getResourceAsStream("ueditor.json")));
 
 		try{
 			JSONObject jsonConfig = new JSONObject( configContent );
@@ -172,7 +172,7 @@ public final class ConfigManager {
 		//return this.parentPath + File.separator + ConfigManager.configFileName;
 		try {
 			//获取classpath下的config.json路径
-			return this.getClass().getClassLoader().getResource("config.json").toURI().getPath();
+			return this.getClass().getClassLoader().getResource("ueditor.json").toURI().getPath();
 		} catch (URISyntaxException e) {
 			return null;
 		}
